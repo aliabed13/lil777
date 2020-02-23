@@ -86,15 +86,14 @@ public class CustomerController {
 
     @FXML
     void GoToUserComplaints(ActionEvent event) throws Exception {
+        App.go_back_to="Customer.fxml";
         AnchorPane pane= FXMLLoader.load(getClass().getResource("SeeComplaints.fxml"));
         rootPane.getChildren().setAll(pane);
-
-
     }
 
     @FXML
     void GoToorderspage(ActionEvent event) throws Exception {
-        App.go_back_to="Costumer.fxml";
+        App.go_back_to="Customer.fxml";
         AnchorPane pane= FXMLLoader.load(getClass().getResource("SeeOrders.fxml"));
         rootPane.getChildren().setAll(pane);
     }

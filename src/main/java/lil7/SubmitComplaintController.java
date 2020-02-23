@@ -55,12 +55,13 @@ public class SubmitComplaintController {
     }
 
     @FXML
-    void SubmitCompAndGoBack(ActionEvent event) {
+    void SubmitCompAndGoBack(ActionEvent event) throws Exception {
         String comp = TexAreacomp.getText();
-
         //MyChat.sendMSG(comp);
         //String Res=MyChat.getMSG();
         //add complaint to user conplaints in SeeComplaints.
+        AnchorPane pane= FXMLLoader.load(getClass().getResource("Customer.fxml"));
+        rootPane.getChildren().setAll(pane);
 
     }
 

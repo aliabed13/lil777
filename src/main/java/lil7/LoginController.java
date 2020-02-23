@@ -78,22 +78,27 @@ public class LoginController {
             switch (Res) {
                 case "SM":
                     user_type = "ManagerMain.fxml";
+                    App.go_back_to="ManagerMain.fxml";
                     access = true;
                     break;
                 case "C":
                     user_type = "Customer.fxml";
+                    App.go_back_to="Customer.fxml";
                     access = true;
                     break;
                 case "CS":
                     user_type = "CSView.fxml";
+                    App.go_back_to="CSView.fxml";
                     access = true;
                     break;
                 case "W":
                     user_type = "Worker.fxml";
+                    App.go_back_to="Worker.fxml";
                     access = true;
                     break;
                 case "GM":
                     user_type = "GeneralManager.fxml";
+                    App.go_back_to="GeneralManager.fxml";
                     access = true;
                     break;
             }

@@ -80,18 +80,9 @@ public class OrderController {
     private Label priceTillNow;
 
     @FXML
-    void CancelOrder(ActionEvent event) {
-        App.catItsSz=0;
-        App.SDItsSz=0;
-        URL url = getClass().getResource("Costumer.fxml");
-        AnchorPane pane;
-        try {
-            pane = FXMLLoader.load(url);
-            rootPane.getChildren().setAll(pane);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+    void CancelOrder(ActionEvent event) throws IOException {
+        AnchorPane pane= FXMLLoader.load(getClass().getResource(App.go_back_to));
+        rootPane.getChildren().setAll(pane);
     }
 
 
