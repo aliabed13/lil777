@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.CustomerController">
+    <children>
+        <Button fx:id="ViewCatalogbtn" layoutX="50.0" layoutY="87.0" mnemonicParsing="false" onAction="#GoToCatalog" prefHeight="51.0" prefWidth="703.0" text="View Catalog">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <Button fx:id="SignOut" layoutX="53.0" layoutY="468.0" mnemonicParsing="false" onAction="#GoToSignIn" prefHeight="56.0" prefWidth="703.0" text="Sign out">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <Button fx:id="SeeOrdersbtn" layoutX="53.0" layoutY="393.0" mnemonicParsing="false" onAction="#GoToorderspage" prefHeight="51.0" prefWidth="703.0" text="View orders">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <Button fx:id="CheckComplaintBtn" layoutX="53.0" layoutY="316.0" mnemonicParsing="false" onAction="#GoToUserComplaints" prefHeight="51.0" prefWidth="703.0" text="Check Complaints">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <Button fx:id="MakeComplaintBtn" layoutX="53.0" layoutY="244.0" mnemonicParsing="false" onAction="#GoToMakeComplaint" prefHeight="51.0" prefWidth="703.0" text="Make complaint">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <Button fx:id="MakeOrderbtn" layoutX="53.0" layoutY="166.0" mnemonicParsing="false" onAction="#GoToMakeOrder" prefHeight="51.0" prefWidth="703.0" text="Make order">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Button>
+        <Label layoutX="50.0" layoutY="35.0" text="Name :">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="462.0" layoutY="35.0" text="Balance:">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="NameLabel" layoutX="141.0" layoutY="28.0" prefHeight="50.0" prefWidth="230.0">
+            <font>
+                <Font size="33.0" />
+            </font>
+        </Label>
+        <Label fx:id="BalanceLabel" layoutX="559.0" layoutY="27.0" prefHeight="50.0" prefWidth="162.0">
+            <font>
+                <Font size="33.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

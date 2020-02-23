@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.SeeOrderController">
+    <children>
+        <TableView fx:id="OrderHisTable" layoutX="9.0" layoutY="30.0" prefHeight="421.0" prefWidth="750.0">
+            <columns>
+                <TableColumn fx:id="ComplaintNum" prefWidth="123.20000648498535" text="Order Number" />
+                <TableColumn fx:id="Comp" prefWidth="106.39996337890625" text="Price" />
+                <TableColumn fx:id="ComplaintReply" prefWidth="123.199951171875" text="Delivery Date" />
+                <TableColumn fx:id="ComplaintReply1" prefWidth="123.199951171875" text="Delivery Time" />
+                <TableColumn fx:id="ComplaintReply11" prefWidth="123.199951171875" text="Payment Method" />
+                <TableColumn fx:id="ComplaintReply111" prefWidth="149.59995117187498" text="Card" />
+            </columns>
+        </TableView>
+        <Button fx:id="GoBackBtn" layoutX="16.0" layoutY="481.0" mnemonicParsing="false" onAction="#BackToMain" prefHeight="81.0" prefWidth="168.0" text="Go Back">
+            <font>
+                <Font size="20.0" />
+            </font></Button>
+        <Button fx:id="CancelOrderBtn" layoutX="574.0" layoutY="480.0" mnemonicParsing="false" onAction="#CancelThisOrder" prefHeight="82.0" prefWidth="168.0" text="Cancel an order">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <TextArea fx:id="ReplyTF" layoutX="219.0" layoutY="459.0" prefHeight="132.0" prefWidth="330.0" />
+    </children>
+</AnchorPane>

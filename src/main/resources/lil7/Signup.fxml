@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.SignupController">
+    <children>
+        <Label fx:id="BGUserID" layoutX="122.0" layoutY="154.0" prefHeight="17.0" prefWidth="104.0" text="User Name">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label fx:id="BGPhone" layoutX="122.0" layoutY="272.0" prefHeight="28.0" prefWidth="155.0" text="Phone Number">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label fx:id="BGEmail" layoutX="122.0" layoutY="194.0" prefHeight="17.0" prefWidth="104.0" text="Email">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label fx:id="BGPassword" layoutX="122.0" layoutY="236.0" prefHeight="17.0" prefWidth="104.0" text="Password">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label fx:id="BGAddress" layoutX="122.0" layoutY="312.0" prefHeight="17.0" prefWidth="104.0" text="Address">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="TFBG1" layoutX="362.0" layoutY="154.0" prefHeight="25.0" prefWidth="253.0" />
+        <TextField fx:id="TFBG11" layoutX="362.0" layoutY="236.0" prefHeight="25.0" prefWidth="253.0" />
+        <TextField fx:id="TFBG13" layoutX="362.0" layoutY="273.0" prefHeight="25.0" prefWidth="253.0" />
+        <TextField fx:id="TFBG14" layoutX="362.0" layoutY="313.0" prefHeight="25.0" prefWidth="253.0" />
+        <TextField fx:id="TFBG15" layoutX="362.0" layoutY="196.0" prefHeight="25.0" prefWidth="253.0" />
+        <Label fx:id="headlabel" layoutX="277.0" layoutY="49.0" prefHeight="68.0" prefWidth="194.0" text="SIGN-UP">
+            <font>
+                <Font size="46.0" />
+            </font>
+        </Label>
+        <Button fx:id="back" layoutX="112.0" layoutY="467.0" mnemonicParsing="false" onAction="#gobacktomain" prefHeight="54.0" prefWidth="98.0" text="Back" />
+        <Button fx:id="FinishSignup" layoutX="528.0" layoutY="462.0" mnemonicParsing="false" onAction="#SendSignupinfo" prefHeight="54.0" prefWidth="104.0" text="Finish Sign-up" />
+        <Label fx:id="BGCC" layoutX="122.0" layoutY="350.0" prefHeight="17.0" prefWidth="104.0" text="CreditCard">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="TFBG141" layoutX="362.0" layoutY="351.0" prefHeight="25.0" prefWidth="253.0" />
+        <Label fx:id="BGCC1" layoutX="122.0" layoutY="388.0" prefHeight="17.0" prefWidth="104.0" text="Store">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <VBox fx:id="v1" layoutX="361.0" layoutY="388.0" prefHeight="74.0" prefWidth="254.0">
+            <children>
+                <SplitMenuButton fx:id="splitStore" mnemonicParsing="false" prefHeight="26.0" prefWidth="255.0" text="Choose Store">
+                    <items>
+                        <MenuItem fx:id="haifa" mnemonicParsing="false" onAction="#ChooseHaifa" text="Haifa" />
+                        <MenuItem fx:id="telaviv" mnemonicParsing="false" onAction="#ChooseTelAviv" text="TelAviv" />
+                    </items>
+                </SplitMenuButton>
+            </children>
+        </VBox>
+        <Label fx:id="la" layoutX="395.0" layoutY="126.0" prefHeight="17.0" prefWidth="400.0" textFill="#e80d0d" />
+    </children>
+</AnchorPane>

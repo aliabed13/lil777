@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.EditWorkersControllers">
+    <children>
+        <TableView fx:id="tabeblon" layoutX="18.0" layoutY="53.0" prefHeight="320.0" prefWidth="750.0">
+            <columns>
+                <TableColumn fx:id="workername" prefWidth="180.80001258850098" text="Worker Name" />
+                <TableColumn fx:id="ComplaintReply" prefWidth="196.800048828125" text="Worker Email Address" />
+                <TableColumn fx:id="Comp" prefWidth="202.40005493164062" text="Phone number" />
+                <TableColumn fx:id="Comp1" prefWidth="167.19998779296873" text="Store" />
+            </columns>
+        </TableView>
+        <Button fx:id="GoBackBtn" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToMain" prefHeight="26.0" prefWidth="126.0" text="Go Back" />
+        <Button fx:id="AddBtnWorker" layoutX="624.0" layoutY="553.0" mnemonicParsing="false" onAction="#AddWorker" prefHeight="39.0" prefWidth="149.0" text="Add Worker" />
+        <Label fx:id="l1" layoutX="18.0" layoutY="484.0" text="To add workers Please Fill in the information specified below: ">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="l2" layoutX="16.0" layoutY="514.0" prefHeight="39.0" prefWidth="82.0" text="Worker Name: " />
+        <Label fx:id="l3" layoutX="16.0" layoutY="553.0" prefHeight="39.0" prefWidth="102.0" text="Password:" />
+        <Label fx:id="l4" layoutX="258.0" layoutY="514.0" prefHeight="39.0" prefWidth="46.0" text="Address:" />
+        <Label fx:id="l5" layoutX="239.0" layoutY="553.0" prefHeight="39.0" prefWidth="102.0" text=" Email Address:" />
+        <TextField fx:id="WorkerNameTF" layoutX="98.0" layoutY="521.0" />
+        <TextField fx:id="PasswordTF" layoutX="81.0" layoutY="560.0" />
+        <TextField fx:id="EmailAddressTF" layoutX="331.0" layoutY="559.0" prefHeight="26.0" prefWidth="241.0" />
+        <TextField fx:id="AddressTF" layoutX="311.0" layoutY="521.0" prefHeight="26.0" prefWidth="163.0" />
+        <Label fx:id="Phone" layoutX="486.0" layoutY="514.0" prefHeight="39.0" prefWidth="46.0" text="Phone:" />
+        <TextField fx:id="PhoneTF" layoutX="532.0" layoutY="521.0" prefHeight="26.0" prefWidth="102.0" />
+        <Label layoutX="18.0" layoutY="393.0" text="To remove a worker please select his name and Click Delete">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="DeleteWorkerBtn" layoutX="18.0" layoutY="431.0" mnemonicParsing="false" onAction="#DeleteWorker" prefHeight="39.0" prefWidth="102.0" text="Delete Worker" />
+        <Label fx:id="l6" layoutX="644.0" layoutY="525.0" text="Store:" />
+        <TextField fx:id="StoreTF" layoutX="682.0" layoutY="521.0" prefHeight="26.0" prefWidth="102.0" />
+    </children>
+</AnchorPane>

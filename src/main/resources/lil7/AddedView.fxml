@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.AddedController">
+    <children>
+        <Button fx:id="loginBtn" layoutX="256.0" layoutY="261.0" mnemonicParsing="false" onAction="#movetologin" prefHeight="42.0" prefWidth="179.0" text="Go Login" />
+        <Label fx:id="label1" layoutX="170.0" layoutY="101.0" prefHeight="64.0" prefWidth="352.0" text="You have successfuly signed up!!">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

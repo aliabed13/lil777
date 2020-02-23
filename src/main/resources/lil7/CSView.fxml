@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.CSViewController">
+    <children>
+        <TableView fx:id="tableview" layoutX="22.0" layoutY="27.0" onMouseClicked="#Selected" prefHeight="284.0" prefWidth="702.0">
+            <columns>
+                <TableColumn fx:id="complaintidCol" prefWidth="171.1999568939209" text="complaintid" />
+                <TableColumn fx:id="dateandtimeCol" minWidth="0.0" prefWidth="155.199951171875" text="dateandtime" />
+                <TableColumn fx:id="complaintCol" minWidth="0.0" prefWidth="255.99996948242188" text="complaint" />
+                <TableColumn fx:id="orderidCol" minWidth="0.0" prefWidth="116.800048828125" text="orderid" />
+            </columns>
+        </TableView>
+        <TextArea fx:id="ReplyTF" layoutX="189.0" layoutY="379.0" prefHeight="191.0" prefWidth="343.0" />
+        <Button fx:id="SubmitReply" layoutX="563.0" layoutY="486.0" mnemonicParsing="false" onAction="#DeleteRowUpdateDB" prefHeight="83.0" prefWidth="160.0" text="Submit Reply">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Button>
+        <Label fx:id="alabel" layoutX="189.0" layoutY="334.0" prefHeight="30.0" prefWidth="325.0" text="Enter reply for selected complain :">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="RefundTF" layoutX="557.0" layoutY="379.0" prefHeight="49.0" prefWidth="149.0" />
+        <Label fx:id="refundlabel" layoutX="563.0" layoutY="334.0" text="Refund :">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="SignoutBtn" layoutX="14.0" layoutY="486.0" mnemonicParsing="false" onAction="#BackToLogin" prefHeight="83.0" prefWidth="160.0" text="Sign Out">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="RefreshBtn" layoutX="12.0" layoutY="379.0" mnemonicParsing="false" onAction="#RefreshTable" prefHeight="50.0" prefWidth="160.0" text="Refresh" />
+    </children>
+</AnchorPane>

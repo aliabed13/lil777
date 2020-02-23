@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.OrderController">
+    <children>
+        <Label layoutX="41.0" layoutY="58.0" prefHeight="30.0" prefWidth="731.0" text="Please Choose products for order, either from Catalog or Design an item yourself!">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="CatalogBtn" layoutX="54.0" layoutY="118.0" mnemonicParsing="false" onAction="#GoToCatalog" prefHeight="68.0" prefWidth="230.0" text="Choose from Catalog">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="DesignBtn" layoutX="487.0" layoutY="118.0" mnemonicParsing="false" onAction="#GoToDesign" prefHeight="68.0" prefWidth="230.0" text="Design an item">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label layoutX="32.0" layoutY="310.0" prefHeight="30.0" prefWidth="162.0" text="Delivery Address:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="29.0" layoutY="356.0" prefHeight="30.0" prefWidth="145.0" text="Delivery Date:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="438.0" prefHeight="30.0" prefWidth="176.0" text="Payment Method:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="32.0" layoutY="270.0" prefHeight="30.0" prefWidth="70.0" text="Price:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="29.0" layoutY="396.0" prefHeight="30.0" prefWidth="145.0" text="Delivery Time:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="PriceLabel" layoutX="119.0" layoutY="270.0" prefHeight="18.0" prefWidth="134.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="DeliveryAddress" layoutX="210.0" layoutY="312.0" prefHeight="26.0" prefWidth="193.0" />
+        <TextField fx:id="DeliveryTime" layoutX="210.0" layoutY="398.0" prefHeight="26.0" prefWidth="193.0" />
+        <VBox layoutX="210.0" layoutY="435.0" prefHeight="162.0" prefWidth="194.0">
+            <children>
+                <SplitMenuButton fx:id="PaymentMethodDrop" mnemonicParsing="false" prefHeight="26.0" prefWidth="194.0">
+                    <items>
+                        <MenuItem fx:id="CreditCard" mnemonicParsing="false" onAction="#SetCreditCardtxt" text="Credit Card" />
+                        <MenuItem fx:id="Balance" mnemonicParsing="false" onAction="#SendBalanceText" text="Balance" />
+                    </items>
+                </SplitMenuButton>
+            </children>
+        </VBox>
+        <TextArea fx:id="CardTF" layoutX="435.0" layoutY="357.0" prefHeight="162.0" prefWidth="334.0" visible="false" />
+        <Label fx:id="CardLabel" layoutX="440.0" layoutY="310.0" prefHeight="30.0" prefWidth="303.0" text="What would you like the card to say" visible="false">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Button fx:id="CancelOrderBtn" layoutX="435.0" layoutY="527.0" mnemonicParsing="false" onAction="#CancelOrder" prefHeight="54.0" prefWidth="115.0" text="Cancel Order" />
+        <Button fx:id="SubmitOrderBtn" layoutX="644.0" layoutY="527.0" mnemonicParsing="false" onAction="#SubmitOrder" prefHeight="54.0" prefWidth="115.0" text="Submit Order" />
+        <TextField fx:id="Blessing" layoutX="436.0" layoutY="347.0" prefHeight="141.0" prefWidth="363.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <Label layoutX="435.0" layoutY="311.0" text="(Optional) Blessing:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="day" layoutX="210.0" layoutY="359.0" prefHeight="30.0" prefWidth="61.0" text="DD" />
+        <TextField fx:id="month" layoutX="284.0" layoutY="359.0" prefHeight="30.0" prefWidth="61.0" text="MM" />
+        <TextField fx:id="year" layoutX="361.0" layoutY="359.0" prefHeight="30.0" prefWidth="61.0" text="YYYY" />
+        <Label fx:id="dialog" layoutX="14.0" layoutY="481.0" prefHeight="112.0" prefWidth="404.0" />
+        <Label fx:id="priceTillNow" layoutX="104.0" layoutY="261.0" prefHeight="42.0" prefWidth="185.0" />
+    </children>
+</AnchorPane>

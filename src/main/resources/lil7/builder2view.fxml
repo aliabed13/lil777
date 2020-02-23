@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.Builder2Controller">
+    <children>
+        <ScrollPane layoutX="-1.0" prefHeight="400.0" prefWidth="600.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="361.0" prefWidth="601.0">
+                    <children>
+                        <Label layoutX="69.0" layoutY="107.0" prefHeight="25.0" prefWidth="470.0" text="(Optional) - choose a dominant color or leave it on us ;)">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <SplitMenuButton fx:id="colorName" layoutX="379.0" layoutY="138.0" mnemonicParsing="false" text="Dominant Color">
+                            <items>
+                                <MenuItem fx:id="pic1" mnemonicParsing="false" onAction="#pick1" text="Yellow" />
+                                <MenuItem fx:id="pic2" mnemonicParsing="false" onAction="#pick2" text="Red" />
+                                <MenuItem fx:id="pic3" mnemonicParsing="false" onAction="#pick3" text="Sky" />
+                                <MenuItem fx:id="pic4" mnemonicParsing="false" onAction="#pick4" text="Turquoise" />
+                                <MenuItem fx:id="pic5" mnemonicParsing="false" onAction="#pick5" text="White" />
+                            </items>
+                        </SplitMenuButton>
+                        <Button fx:id="BackBtn" layoutX="81.0" layoutY="289.0" mnemonicParsing="false" onAction="#BackAction" text="Back">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="FinishBtn" layoutX="432.0" layoutY="289.0" mnemonicParsing="false" onAction="#FinishAction" text="Finish">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Label fx:id="itemTypeToBuild" layoutX="24.0" layoutY="11.0" prefHeight="39.0" prefWidth="537.0">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

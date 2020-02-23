@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.ReportsController">
+    <children>
+        <Label fx:id="HeadLabel" layoutX="14.0" layoutY="7.0" prefHeight="37.0" prefWidth="135.0" text="Choose Report:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tablecompHAifa" layoutX="41.0" layoutY="170.0" prefHeight="320.0" prefWidth="243.0" visible="false">
+            <columns>
+                <TableColumn prefWidth="75.0" text="UserName" />
+                <TableColumn prefWidth="75.0" text="Answered" />
+                <TableColumn prefWidth="75.0" text="Date" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tableCompTel" layoutX="351.0" layoutY="170.0" prefHeight="320.0" prefWidth="243.0" visible="false">
+            <columns>
+                <TableColumn prefWidth="75.0" text="UserName" />
+                <TableColumn prefWidth="75.0" text="Answered" />
+                <TableColumn prefWidth="75.0" text="Date" />
+            </columns>
+        </TableView>
+        <Label fx:id="LabelHaifa" layoutX="41.0" layoutY="134.0" prefHeight="18.0" prefWidth="73.0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label fx:id="LabelTelAviv" layoutX="351.0" layoutY="134.0" prefHeight="18.0" prefWidth="73.0">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tableOrdersHaifa" layoutX="34.0" layoutY="179.0" prefHeight="320.0" prefWidth="243.0" visible="false">
+            <columns>
+                <TableColumn fx:id="orsl1cl1" prefWidth="122.39997100830078" text="Name Of Costumer" />
+                <TableColumn fx:id="orsl1cl2" prefWidth="120.800048828125" text="Money Paid" />
+            </columns>
+        </TableView>
+        <TableView fx:id="tableOrdersTel" layoutX="330.0" layoutY="179.0" prefHeight="320.0" prefWidth="243.0" visible="false">
+            <columns>
+                <TableColumn fx:id="orsl2cl1" prefWidth="122.39997100830078" text="Name Of Costumer" />
+                <TableColumn fx:id="orsl2cl2" prefWidth="120.800048828125" text="Money Paid" />
+            </columns>
+        </TableView>
+        <SplitMenuButton fx:id="choosingmenu" layoutX="160.0" layoutY="13.0" mnemonicParsing="false" text="Reports">
+            <items>
+                <MenuItem fx:id="option1" mnemonicParsing="false" onAction="#ChooseReport1" text="Order" />
+                <MenuItem fx:id="option2" mnemonicParsing="false" onAction="#ChooseReport2" text="Complaints" />
+            </items>
+        </SplitMenuButton>
+        <SplitMenuButton fx:id="monthslot1" layoutX="270.0" layoutY="49.0" mnemonicParsing="false" text="Mounth">
+            <items>
+                <MenuItem fx:id="m1" mnemonicParsing="false" onAction="#ChooseMonth1s" text="January" />
+                <MenuItem fx:id="m2" mnemonicParsing="false" onAction="#ChooseMonth2s" text="February" />
+                <MenuItem fx:id="m3" mnemonicParsing="false" onAction="#ChooseMonth3s" text="March" />
+                <MenuItem fx:id="m4" mnemonicParsing="false" onAction="#ChooseMonth4s" text="April" />
+                <MenuItem fx:id="m5" mnemonicParsing="false" onAction="#ChooseMonth5s" text="May" />
+                <MenuItem fx:id="m6" mnemonicParsing="false" onAction="#ChooseMonth6s" text="June" />
+                <MenuItem fx:id="m7" mnemonicParsing="false" onAction="#ChooseMonth7s" text="July" />
+                <MenuItem fx:id="m8" mnemonicParsing="false" onAction="#ChooseMonth8s" text="August" />
+                <MenuItem fx:id="m9" mnemonicParsing="false" onAction="#ChooseMonth9s" text="Septemper" />
+                <MenuItem fx:id="m10" mnemonicParsing="false" onAction="#ChooseMonth10s" text="October" />
+                <MenuItem fx:id="m13" mnemonicParsing="false" onAction="#ChooseMonth11s" text="November" />
+                <MenuItem fx:id="m12" mnemonicParsing="false" onAction="#ChooseMonth12s" text="December" />
+            </items>
+        </SplitMenuButton>
+        <Label fx:id="yearlabel" layoutX="369.0" layoutY="36.0" prefHeight="50.0" prefWidth="54.0" text="Year:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="yearfield1" layoutX="424.0" layoutY="49.0" prefHeight="25.0" prefWidth="123.0" />
+        <Button fx:id="gnrtbtn" layoutX="551.0" layoutY="115.0" mnemonicParsing="false" onAction="#BringReport" text="Generate">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="backbtn" layoutX="34.0" layoutY="499.0" mnemonicParsing="false" onAction="#GoBack" text="Back" />
+        <SplitMenuButton fx:id="monthslot2" layoutX="270.0" layoutY="96.0" mnemonicParsing="false" text="Mounth">
+            <items>
+                <MenuItem fx:id="m11" mnemonicParsing="false" onAction="#ChooseMonth1" text="January" />
+                <MenuItem fx:id="m21" mnemonicParsing="false" onAction="#ChooseMonth2" text="February" />
+                <MenuItem fx:id="m31" mnemonicParsing="false" onAction="#ChooseMonth3" text="March" />
+                <MenuItem fx:id="m41" mnemonicParsing="false" onAction="#ChooseMonth4" text="April" />
+                <MenuItem fx:id="m51" mnemonicParsing="false" onAction="#ChooseMonth5" text="May" />
+                <MenuItem fx:id="m61" mnemonicParsing="false" onAction="#ChooseMonth6" text="June" />
+                <MenuItem fx:id="m71" mnemonicParsing="false" onAction="#ChooseMonth7" text="July" />
+                <MenuItem fx:id="m81" mnemonicParsing="false" onAction="#ChooseMonth8" text="August" />
+                <MenuItem fx:id="m91" mnemonicParsing="false" onAction="#ChooseMonth9" text="Septemper" />
+                <MenuItem fx:id="m101" mnemonicParsing="false" onAction="#ChooseMonth10" text="October" />
+                <MenuItem fx:id="m111" mnemonicParsing="false" onAction="#ChooseMonth11" text="November" />
+                <MenuItem fx:id="m121" mnemonicParsing="false" onAction="#ChooseMonth12" text="December" />
+            </items>
+        </SplitMenuButton>
+        <TextField fx:id="yearfield2" layoutX="424.0" layoutY="96.0" prefHeight="25.0" prefWidth="123.0" />
+        <Label fx:id="yearlabel1" layoutX="369.0" layoutY="84.0" prefHeight="50.0" prefWidth="54.0" text="Year:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <SplitMenuButton fx:id="storeslot1" layoutX="139.0" layoutY="49.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Select Store" visible="false">
+            <items>
+                <MenuItem fx:id="sl1sth" mnemonicParsing="false" onAction="#SlotoneSelectHaifa" text="Haifa" />
+                <MenuItem fx:id="sl1stt" mnemonicParsing="false" onAction="#SlotoneSelectTel" text="Tel Aviv" />
+            </items>
+        </SplitMenuButton>
+        <SplitMenuButton fx:id="storeslot2" layoutX="138.0" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Select Store" visible="false">
+            <items>
+                <MenuItem fx:id="sl2sth" mnemonicParsing="false" onAction="#SlotowSelectHaifa" text="Haifa " />
+                <MenuItem fx:id="sl2stt" mnemonicParsing="false" onAction="#SlottowSelectTel" text="Tel Aviv" />
+            </items>
+        </SplitMenuButton>
+        <Label fx:id="slot1l" layoutX="54.0" layoutY="49.0" prefHeight="25.0" prefWidth="103.0" text="Slot1:    Store:" />
+        <Label fx:id="slot2l" layoutX="54.0" layoutY="96.0" prefHeight="25.0" prefWidth="103.0" text="Slot2:    Store:" />
+    </children>
+</AnchorPane>

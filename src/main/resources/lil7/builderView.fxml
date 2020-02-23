@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lil7.BuilderController">
+    <children>
+        <ScrollPane layoutX="-5.0" layoutY="51.0" prefHeight="351.0" prefWidth="612.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="356.0" prefWidth="615.0">
+                    <children>
+                        <Label layoutX="13.0" layoutY="-11.0" prefHeight="41.0" prefWidth="568.0" text="Click on the item you want to design to continue">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="vaseLbl" layoutX="24.0" layoutY="76.0" onMouseClicked="#type1Chosen" prefHeight="41.0" prefWidth="568.0" text="Vase    |      A beautiful flower in a vase                           5 Coins">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="roseLbl" layoutX="24.0" layoutY="137.0" onMouseClicked="#type2Chosen" prefHeight="41.0" prefWidth="568.0" text="Rose   |      One rose for your lover                                  2 Coins">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="bridalLbl" layoutX="24.0" layoutY="202.0" onMouseClicked="#type3Chosen" prefHeight="41.0" prefWidth="568.0" text="Bridal |      Bridal Flower Bouquet                                    45 Coins">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="bouquetLbl" layoutX="24.0" layoutY="261.0" onMouseClicked="#type4Chosen" prefHeight="41.0" prefWidth="568.0" text="Bouquet | Casual Mixed Bouquet                                   15 Coins">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Label layoutX="180.0" layoutY="4.0" prefHeight="41.0" prefWidth="241.0" text="Design your item">
+            <font>
+                <Font name="David Bold" size="27.0" />
+            </font>
+        </Label>
+        <Button fx:id="BackBtn" layoutX="5.0" layoutY="4.0" mnemonicParsing="false" onAction="#BackAction" prefHeight="41.0" prefWidth="101.0" text="Back">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
