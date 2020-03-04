@@ -12,10 +12,9 @@ public class User {
     private SimpleStringProperty creditCard;
     private SimpleStringProperty credit;
     private SimpleStringProperty storeId;
-    private SimpleStringProperty auth;
     private SimpleStringProperty blocked;
 
-    public User(String username,String password,String adress,String email,String phone,String creditcard,String credit,String storeid,String auth,String blocked) {
+    public User(String username,String password,String adress,String email,String phone,String creditcard,String credit,String storeid,String blocked) {
         this.username=new SimpleStringProperty(username);
         this.password=new SimpleStringProperty(password);
         this.address=new SimpleStringProperty(adress);
@@ -24,21 +23,18 @@ public class User {
         this.creditCard=new SimpleStringProperty(creditcard);
         this.credit=new SimpleStringProperty(credit);
         this.storeId=new SimpleStringProperty(storeid);
-        this.auth=new SimpleStringProperty(auth);
         this.blocked=new SimpleStringProperty(blocked);
     }
-    public User(String username,String adress,String email,String phone,String auth,String blocked) {
+    public User(String username,String adress,String email,String phone,String blocked) {
         this.username=new SimpleStringProperty(username);
         this.address=new SimpleStringProperty(adress);
         this.email=new SimpleStringProperty(email);
-        this.auth=new SimpleStringProperty(auth);
         this.blocked=new SimpleStringProperty(blocked);
     }
     public User(User user) {
         this.username=new SimpleStringProperty(user.getUsername());
         this.email=new SimpleStringProperty(user.getEmail());
         this.phone=new SimpleStringProperty(user.getPhone());
-        this.auth=new SimpleStringProperty(user.getAuth());
         this.blocked=new SimpleStringProperty(user.getBlocked());
 
     }
@@ -67,10 +63,7 @@ public class User {
     public void set_storeid(String storeId) {
         this.storeId=new SimpleStringProperty(storeId);
     }
-    public void set_auth(String auth) {
-        this.auth=new SimpleStringProperty(auth);
-    }
-    public void set_blocked(String blocked) {
+      public void set_blocked(String blocked) {
         this.blocked=new SimpleStringProperty(blocked);
     }
 
@@ -99,11 +92,7 @@ public class User {
     public String getStoreid() {
             return this.storeId.get();
     }
-    public String getAuth() {
-        return this.auth.get();
-    }
     public String getBlocked() {
         return this.blocked.get();
     }
-
 }

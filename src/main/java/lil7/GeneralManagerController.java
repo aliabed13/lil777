@@ -1,5 +1,6 @@
 package lil7;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -48,12 +49,18 @@ public class GeneralManagerController {
     }
 
     @FXML
-    void GoToChooseReports(ActionEvent event) {
+    void GoToChooseReports(ActionEvent event) throws Exception {
+    	App.go_back_to="GeneralManager.fxml";
+        AnchorPane pane= FXMLLoader.load(getClass().getResource("Reports.fxml"));
+        rootPane.getChildren().setAll(pane);
 
     }
 
     @FXML
-    void GetMonthlyReport(ActionEvent event) {
+    void GetMonthlyReport(ActionEvent event) throws Exception {
+    	App.go_back_to="GeneralManager.fxml";
+        AnchorPane pane= FXMLLoader.load(getClass().getResource("Reports.fxml"));
+        rootPane.getChildren().setAll(pane);
 
     }
 

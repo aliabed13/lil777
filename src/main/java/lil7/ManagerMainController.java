@@ -1,5 +1,6 @@
 package lil7;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -37,8 +38,10 @@ public class ManagerMainController {
     }
 
     @FXML
-    void GetMonthlyReport(ActionEvent event) {
-
+    void GetMonthlyReport(ActionEvent event) throws IOException {
+    	 App.go_back_to="ManagerMain.fxml";
+         AnchorPane pane= FXMLLoader.load(getClass().getResource("Reports.fxml"));
+         rootPane.getChildren().setAll(pane);
     }
 
     @FXML

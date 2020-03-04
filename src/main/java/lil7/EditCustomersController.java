@@ -113,7 +113,7 @@ public class EditCustomersController {
             iphone = cols[4];
             istatus = cols[8];
             istatus11 = cols[9];
-            User user=new User(iusername,cols[1],cols[2],cols[3],cols[4],cols[5],cols[6],cols[7],cols[8],cols[9]);
+            User user=new User(iusername,cols[1],cols[2],cols[3],cols[4],cols[5],cols[6],cols[7],cols[8]);
             Users1.add(user);
         }
         return Users1;

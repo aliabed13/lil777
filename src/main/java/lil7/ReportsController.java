@@ -1,5 +1,6 @@
 package lil7;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -182,242 +183,267 @@ public class ReportsController {
     @FXML
     private Label slot2l;
 
-    String monthlot1;
-    String monthlot2;
-    String yearslot1;
-    String yearslot2;
-    String storeslot11;
-    String storeslot21;
+    String monthlot1="MM";
+    String monthlot2="MM";
+    String yearslot1="YYYY";
+    String yearslot2="YYYY";
+    String storeslot11="Slot1";
+    String storeslot21="Slot2";
     String type;
-
+    String msg;
+    String msg2;
     @FXML
     void BringReport(ActionEvent event) {
-        if(App.go_back_to.equals("ManagerMain.fxml"))
-        {
-            String msg="getstoreordersbymonth#";
-            String msg2="getstoreordersbymonth#";
-            storeslot11=App.shopID;
-            storeslot21=App.shopID;
-            yearslot1=yearfield1.getText();
-            yearslot2=yearfield2.getText();
-            msg+=(storeslot11 + yearslot1 + monthlot1);
-            msg2+=(storeslot21 + yearslot2 + monthlot2);
-//    		MyChat.sendMSG(msg);
-//    		String res=MyChat.getMSG();
-//    		MyChat.sendMSG(msg2);
-//    		String res2=MyChat.getMSG();
+    	if(App.go_back_to.equals("ManagerMain.fxml"))
+    	{
+    		if (type=="order")
+    		{
+	    		 msg="getstoreordersbymonth#";
+	    		 msg2="getstoreordersbymonth#";
+	    		 tableOrdersHaifa.setVisible(true);
+	     		tableOrdersTel.setVisible(true);
+    		}
+    		else if (type=="comp")
+    		{
+    			 msg="getstorecompbymonth#";
+        		 msg2="getstorecompsbymonth#";
+        		 tablecompHAifa.setVisible(true);
+         		tableCompTel.setVisible(true);
+    		}
+    		yearslot1=yearfield1.getText();
+    		yearslot2=yearfield2.getText();
+    		msg+=(storeslot11+"#"+monthlot1+"#"+yearslot1);
+    		msg2+=(storeslot21+"#"+monthlot2+"#"+yearslot2);
+    		MyChat.sendMSG(msg);
+    		String res=MyChat.getMSG();
+    		MyChat.sendMSG(msg2);
+    		String res2=MyChat.getMSG();
+    		
 //    		view slot 1 on tableOrdersHaifa
 //			view slot 2 on tableOrdersTel (el tasmeyat stam)
-
-        }
+    		}
     	else {
-            String msg="getstoreordersbymonth#";
-            String msg2="getstoreordersbymonth#";
-            yearslot1=yearfield1.getText();
-            yearslot2=yearfield2.getText();
-            msg+=(storeslot11 + yearslot1 + monthlot1);
-            msg2+=(storeslot21 + yearslot2 + monthlot2);
-//    		MyChat.sendMSG(msg);
-//    		String res=MyChat.getMSG();
-//    		MyChat.sendMSG(msg2);
-//    		String res2=MyChat.getMSG();
-//    		view slot 1 on tableOrdersHaifa
+    		if (type=="order")
+    		{
+	    		 msg="getstoreordersbymonth#";
+	    		 msg2="getstoreordersbymonth#";
+	    		 tableOrdersHaifa.setVisible(true);
+	     		tableOrdersTel.setVisible(true);
+    		}
+    		else if (type=="comp")
+    		{
+    			 msg="getstorecompbymonth#";
+        		 msg2="getstorecompsbymonth#";
+        		 tablecompHAifa.setVisible(true);
+          		tableCompTel.setVisible(true);
+    		}
+    		
+       		yearslot1=yearfield1.getText();
+    		yearslot2=yearfield2.getText();
+    		
+    		msg+=(storeslot11 +"#"+ yearslot1 +"#"+ monthlot1);
+    		msg2+=(storeslot21 +"#"+ yearslot2 + "#"+ monthlot2);
+    		MyChat.sendMSG(msg);
+    		String res=MyChat.getMSG();
+    		MyChat.sendMSG(msg2);
+    		String res2=MyChat.getMSG();
+            //view slot 1 on tableOrdersHaifa
 //			view slot 2 on tableOrdersTel (el tasmeyat stam)
-        }
-        if(App.go_back_to.equals("ManagerMain.fxml"))
-        {
-            String msg="getstorecompbymonth#";
-            String msg2="getstorecompbymonth#";
-            storeslot11=App.shopID;
-            storeslot21=App.shopID;
-            yearslot1=yearfield1.getText();
-            yearslot2=yearfield2.getText();
-            msg+=(storeslot11 + yearslot1 + monthlot1);
-            msg2+=(storeslot21 + yearslot2 + monthlot2);
-//    		MyChat.sendMSG(msg);
-//    		String res=MyChat.getMSG();
-//    		MyChat.sendMSG(msg2);
-//    		String res2=MyChat.getMSG();
-//    		view slot 1 on tableOrdersHaifa
-//			view slot 2 on tableOrdersTel (el tasmeyat stam)
-
-        }
-    	else {
-            String msg="getstorecompbymonth#";
-            String msg2="getstorecompbymonth#";
-            yearslot1=yearfield1.getText();
-            yearslot2=yearfield2.getText();
-            msg+=(storeslot11 + yearslot1 + monthlot1);
-            msg2+=(storeslot21 + yearslot2 + monthlot2);
-//    		MyChat.sendMSG(msg);
-//    		String res=MyChat.getMSG();
-//    		MyChat.sendMSG(msg2);
-//    		String res2=MyChat.getMSG();
-//    		view slot 1 on tablecompHAifa
-//			view slot 2 on tableCompTel (el tasmeyat stam)
-        }
-
+    	}
+    	
     }
 
     @FXML
     void ChooseMonth1(ActionEvent event) {
-        monthlot2="01";
+    	monthlot2="01";
+    	monthslot2.setText("January");
     }
 
     @FXML
     void ChooseMonth10(ActionEvent event) {
-        monthlot2="10";
+    	monthlot2="10";
+    	monthslot2.setText("October");
     }
 
     @FXML
     void ChooseMonth10s(ActionEvent event) {
-        monthlot1="10";
+    	monthlot1="10";
+    	monthslot1.setText("October");
     }
 
     @FXML
     void ChooseMonth11(ActionEvent event) {
-        monthlot2="11";
+    	monthlot2="11";
+    	monthslot2.setText("November");
     }
 
     @FXML
     void ChooseMonth11s(ActionEvent event) {
-        monthlot1="11";
+    	monthlot1="11";
+    	monthslot1.setText("November");
     }
 
     @FXML
     void ChooseMonth12(ActionEvent event) {
-        monthlot2="12";
+    	monthlot2="12";
+    	monthslot2.setText("December");
     }
 
     @FXML
     void ChooseMonth12s(ActionEvent event) {
-        monthlot1="12";
+    	monthlot1="12";
+    	monthslot1.setText("December");
     }
 
     @FXML
     void ChooseMonth1s(ActionEvent event) {
-        monthlot1="01";
+    	monthlot1="01";
+    	monthslot1.setText("January");
+    	
     }
 
     @FXML
     void ChooseMonth2(ActionEvent event) {
-        monthlot2="02";
+    	monthlot2="02";
+    	monthslot2.setText("February");
     }
 
     @FXML
     void ChooseMonth2s(ActionEvent event) {
-        monthlot1="02";
+    	monthlot1="02";
+    	monthslot1.setText("February");
     }
 
     @FXML
     void ChooseMonth3(ActionEvent event) {
-        monthlot2="03";
+    	monthlot2="03";
+    	monthslot2.setText("March");
     }
 
     @FXML
     void ChooseMonth3s(ActionEvent event) {
-        monthlot1="03";
+    	monthlot1="03";
+    	monthslot1.setText("March");
     }
 
     @FXML
     void ChooseMonth4(ActionEvent event) {
-        monthlot2="04";
+    	monthlot2="04";
+    	monthslot2.setText("April");
     }
 
     @FXML
     void ChooseMonth4s(ActionEvent event) {
-        monthlot1="04";
+    	monthlot1="04";
+    	monthslot1.setText("April");
     }
 
     @FXML
     void ChooseMonth5(ActionEvent event) {
-        monthlot2="05";
+    	monthlot2="05";
+    	monthslot2.setText("May");
     }
 
     @FXML
     void ChooseMonth5s(ActionEvent event) {
-        monthlot1="05";
+    	monthlot1="05";
+    	monthslot1.setText("May");
     }
 
     @FXML
     void ChooseMonth6(ActionEvent event) {
-        monthlot2="06";
+    	monthlot2="06";
+    	monthslot2.setText("June");
     }
 
     @FXML
     void ChooseMonth6s(ActionEvent event) {
-        monthlot1="06";
+    	monthlot1="06";
+    	monthslot1.setText("June");
     }
 
     @FXML
     void ChooseMonth7(ActionEvent event) {
-        monthlot2="07";
+    	monthlot2="07";
+    	monthslot2.setText("July");
     }
 
     @FXML
     void ChooseMonth7s(ActionEvent event) {
-        monthlot1="07";
+    	monthlot1="07";
+    	monthslot1.setText("July");
     }
 
     @FXML
     void ChooseMonth8(ActionEvent event) {
-        monthlot2="08";
+    	monthlot2="08";
+    	monthslot2.setText("August");
     }
 
     @FXML
     void ChooseMonth8s(ActionEvent event) {
-        monthlot1="08";
+    	monthlot1="08";
+    	monthslot1.setText("August");
     }
 
     @FXML
     void ChooseMonth9(ActionEvent event) {
-        monthlot2="09";
+    	monthlot2="09";
+    	monthslot2.setText("September");
     }
 
     @FXML
     void ChooseMonth9s(ActionEvent event) {
-        monthlot1="09";
+    	monthlot1="09";
+    	monthslot1.setText("September");
     }
 
     @FXML
     void ChooseReport1(ActionEvent event) {
-        type="order";
+    	type="order";
+    	choosingmenu.setText("Orders");
     }
 
     @FXML
     void ChooseReport2(ActionEvent event) {
-        type="complaint";
+    	type="complaint";
+    	choosingmenu.setText("Complaints");
     }
 
     @FXML
     void GoBack(ActionEvent event) throws Exception {
-        if(App.go_back_to.equals("GeneralManager.fxml")) {
-            storeslot2.setVisible(false);
-            storeslot1.setVisible(false);
-        }
-        AnchorPane pane= FXMLLoader.load(getClass().getResource(App.go_back_to));
-        rootPane.getChildren().setAll(pane);
+       	storeslot2.setVisible(false);
+       	storeslot1.setVisible(false);
+    	AnchorPane pane= FXMLLoader.load(getClass().getResource(App.go_back_to));
+    	rootPane.getChildren().setAll(pane);
     }
 
     @FXML
     void SlotoneSelectHaifa(ActionEvent event) {
-        storeslot11="haifa";
+    	storeslot11="haifa";
+    	storeslot1.setText("Haifa");
+    	LabelHaifa.setText("Haifa:");
     }
 
     @FXML
     void SlotoneSelectTel(ActionEvent event) {
-        storeslot11="telaviv";
-
+    	storeslot11="telaviv";
+    	storeslot1.setText("Tel Aviv");
+    	LabelHaifa.setText("Tel Aviv:");
     }
 
     @FXML
     void SlotowSelectHaifa(ActionEvent event) {
-        storeslot21="haifa";
+    	storeslot21="haifa";
+    	storeslot2.setText("Haifa");
+    	LabelTelAviv.setText("Haifa:");
     }
 
     @FXML
     void SlottowSelectTel(ActionEvent event) {
-        storeslot21="telaviv";
+    	storeslot21="telaviv";
+    	storeslot2.setText("Tel Aviv");
+    	LabelTelAviv.setText("Tel Aviv:");
     }
 
     @FXML
@@ -476,8 +502,8 @@ public class ReportsController {
         assert slot1l != null : "fx:id=\"slot1l\" was not injected: check your FXML file 'Reports.fxml'.";
         assert slot2l != null : "fx:id=\"slot2l\" was not injected: check your FXML file 'Reports.fxml'.";
         if(App.go_back_to.equals("GeneralManager.fxml")) {
-            storeslot2.setVisible(true);
-            storeslot1.setVisible(true);
+        	storeslot2.setVisible(true);
+        	storeslot1.setVisible(true);
         }
     }
 }

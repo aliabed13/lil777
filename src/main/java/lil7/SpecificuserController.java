@@ -218,7 +218,6 @@ public class SpecificuserController {
         emailab.setText(App.selected_user_edit.getEmail());
         phonelab.setText(App.selected_user_edit.getPhone());
         statuslab.setText(App.selected_user_edit.getBlocked());
-        lab.setText(App.selected_user_edit.getAuth());
         String msg="getuserinfo#"+App.selected_user_edit.getUsername();
         MyChat.sendMSG(msg);
         String row=MyChat.getMSG();
